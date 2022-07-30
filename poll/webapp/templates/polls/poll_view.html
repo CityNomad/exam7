@@ -31,12 +31,11 @@
                         <div class="card-body">
                             <h5>Ответ № {{ choice.id }}</h5>
                             <p>{{ choice.text }}</p>
-{#                                <div class="btn-group" role="group">#}
+                                <div class="btn-group" role="group">
 {#                                    <a href="{% url "delete_choice" choice.pk %}"><i class="bi bi-trash"></i></a>#}
-{#                                    <a href="{% url "update_choice" choice.pk %}"><i class="bi bi-pencil"></i></a>#}
-{#                                    <a href="{% url "create_choice" poll.pk %}"><i class="bi bi-file-earmark-plus"></i></a>#}
-{#                                </div>#}
+                                    <a href="{% url "update_choice" choice.pk %}"><i class="bi bi-pencil"></i></a>
 
+                                </div>
                         </div>
                     </div>
                 </div>
