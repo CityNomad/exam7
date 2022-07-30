@@ -1,0 +1,172 @@
+[
+{
+  "model": "webapp.poll",
+  "pk": 1,
+  "fields": {
+    "question": "В каком году родилась Курманжан-Датка?",
+    "created_at": "2022-07-30T06:17:37.631Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 2,
+  "fields": {
+    "question": "Год основания города Бишкек?",
+    "created_at": "2022-07-30T06:18:14.455Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 3,
+  "fields": {
+    "question": "Для чего в элечеке 50 метров белой ткани?",
+    "created_at": "2022-07-30T06:18:38.825Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 4,
+  "fields": {
+    "question": "Какой цвет окантовки колпака в древности означал опыт  и надежность?",
+    "created_at": "2022-07-30T06:19:31.203Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 5,
+  "fields": {
+    "question": "Что было первыми деньгами на Великом Шелковом пути?",
+    "created_at": "2022-07-30T06:20:09.733Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 6,
+  "fields": {
+    "question": "Что означала висящая в юрте шкура лисы для гостя?",
+    "created_at": "2022-07-30T06:21:05.757Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 7,
+  "fields": {
+    "question": "Первая религия кыргызского народа",
+    "created_at": "2022-07-30T06:21:47.830Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 8,
+  "fields": {
+    "question": "Тест",
+    "created_at": "2022-07-30T08:44:14.178Z"
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 1,
+  "fields": {
+    "text": "1811",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 3,
+  "fields": {
+    "text": "1801",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 4,
+  "fields": {
+    "text": "Для использования, как простыни",
+    "poll": 3
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 5,
+  "fields": {
+    "text": "Для выражения статуса женщины, ее положения",
+    "poll": 3
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 6,
+  "fields": {
+    "text": "Для скатерти",
+    "poll": 3
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 9,
+  "fields": {
+    "text": "1823",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 10,
+  "fields": {
+    "text": "ggg",
+    "poll": 8
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 12,
+  "fields": {
+    "text": "ggg",
+    "poll": 8
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 13,
+  "fields": {
+    "text": "шаманизм",
+    "poll": 7
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 14,
+  "fields": {
+    "text": "тенгрианизм",
+    "poll": 7
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 16,
+  "fields": {
+    "text": "синий",
+    "poll": 4
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$sSTKqLvl1HbEamZwX11LLO$WDcqIfUi5XusezT/BY08c34CWf7jVzIGkk1qOcOHil4=",
+    "last_login": "2022-07-30T06:00:53.266Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-07-30T05:29:18.878Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

@@ -18,7 +18,6 @@ class CreateAnswer(TemplateView):
 
     def post(self, request, *args, **kwargs):
         answer = get_object_or_404(Answer, pk=kwargs['pk'])
-        i = self.request.POST.get('answer')
-        print(i)
-        answer.choice = i
+        answer.choice = self.request.POST.get('answer')
         answer.save()
+        return render(request, "poll_view")
