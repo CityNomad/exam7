@@ -16,7 +16,7 @@
                     <div class="card p-2 mb-2">
                         <div class="card-body">
                             <h4 class="card-title mt-2">{{ poll.question }}</h4>
-                            <a href=# class="btn btn-outline-danger">Подробнее</a>
+                            <a href='{% url 'poll_view' poll.pk %}' class="btn btn-outline-danger">Подробнее</a>
                         </div>
                     </div>
             </div>

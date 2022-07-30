@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Подробнее{% endblock %}
+{% block nav_add %}
+    <li class="nav-item">
+        <a class="nav-link" href=#>Создать опрос</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href=#>Изменить опрос</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href=#>Удалить опрос</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href=#>Добавить ответ</a>
+    </li>
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="card mt-4 w-100 p-3">
+        <div class="card-body">
+            <h3>Опрос № {{ poll.id }}</h3>
+            <h5 class="card-title">Вопрос: {{ poll.question }}</h5>
+            <p class="card-text pb-2">Количество ответов: {{ counts }}</p>
+
+        </div>
+    </div>
+    {% for choice in choices %}
+        <div class="container">
+            <div class="row">
+                <div class="col col-4 mt-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Ответ № {{ choice.id }}</h5>
+                            <p>{{ choice.text }}</p>
+{#                                <div class="btn-group" role="group">#}
+{#                                    <a href="{% url "delete_choice" choice.pk %}"><i class="bi bi-trash"></i></a>#}
+{#                                    <a href="{% url "update_choice" choice.pk %}"><i class="bi bi-pencil"></i></a>#}
+{#                                    <a href="{% url "create_choice" poll.pk %}"><i class="bi bi-file-earmark-plus"></i></a>#}
+{#                                </div>#}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endfor %}
+</div>
+{% endblock %}

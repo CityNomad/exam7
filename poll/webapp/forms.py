@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import widgets
-from webapp.models import Poll
+from webapp.models import Poll, Choice
 
 class PollForm(forms.ModelForm):
 
@@ -13,3 +13,12 @@ class PollForm(forms.ModelForm):
 
 class SearchForm(forms.Form):
     search = forms.CharField(max_length=50, required=False, label='Найти')
+
+class ChoiceForm(forms.ModelForm):
+
+    class Meta:
+        model = Choice
+        fields = ["text"]
+        widgets = {
+            "text": widgets.CheckboxSelectMultiple,
+        }
