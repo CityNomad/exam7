@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, FormView, ListView, DetailView, CreateView, DeleteView, UpdateView
 from webapp.models import Poll
 from webapp.forms import SearchForm, PollForm, ChoiceForm
@@ -22,3 +22,13 @@ class PollView(DetailView):
         context['choices'] = self.object.choices.order_by("id")
         context['counts'] = self.object.choices.count()
         return context
+
+class CreatePoll(CreateView):
+    form_class = PollForm
+    template_name = "polls/create_poll.html"
+
+    def form_valid(self, form):
+        poll = form.save(commit=False)
+        poll.save()
+        form.save_m2m()
+        return redirect("poll_view", pk=poll.pk)
