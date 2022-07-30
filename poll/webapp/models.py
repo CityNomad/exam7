@@ -24,6 +24,9 @@ class Choice(models.Model):
     def __str__(self):
         return f"{self.id}.{self.text}"
 
+    def get_absolute_url(self):
+        return reverse("poll_view", kwargs={"pk": self.pk})
+
     class Meta:
         db_table = "choices"
         verbose_name = "Ответ"

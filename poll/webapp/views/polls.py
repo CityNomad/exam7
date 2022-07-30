@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.views.generic import TemplateView, FormView, ListView, DetailView, CreateView, DeleteView, UpdateView
+from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
 from webapp.models import Poll
 from webapp.forms import SearchForm, PollForm, ChoiceForm
 from django.urls import reverse_lazy

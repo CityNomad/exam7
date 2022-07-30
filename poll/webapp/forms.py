@@ -20,5 +20,5 @@ class ChoiceForm(forms.ModelForm):
         model = Choice
         fields = ["text"]
         widgets = {
-            "text": widgets.CheckboxSelectMultiple,
+            "text": widgets.Textarea(attrs={"placeholder": "введите ответ"}),
         }

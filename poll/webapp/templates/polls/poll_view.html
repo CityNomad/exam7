@@ -9,7 +9,7 @@
         <a class="nav-link" href="{% url 'delete_poll' poll.pk %}">Удалить опрос</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href=#>Добавить ответ</a>
+        <a class="nav-link" href="{% url 'create_choice' poll.pk %}">Добавить ответ</a>
     </li>
 {% endblock %}
 {% block content %}

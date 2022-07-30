@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Добавление ответа{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Добавить ответ</h1>
+        <form action="" method="post">
+            {% include "partial/form.html" with button_text="Добавить" %}
+        </form>
+    </div>
+{% endblock %}
