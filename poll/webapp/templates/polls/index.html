@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Главная{% endblock %}
+{% block nav_add %}
+    <li class="nav-item">
+        <a class="nav-link" href=#>Добавить опрос</a>
+    </li>
+{% endblock %}
+{% block content %}
+<div class="container">
+
+    <div><h1>Список опросов по истории Кыргызстана:</h1></div>
+    <div class="row">
+        {% for poll in polls %}
+            <div class="col col-md-4 mt-2">
+                    <div class="card p-2 mb-2">
+                        <div class="card-body">
+                            <h4 class="card-title mt-2">{{ poll.question }}</h4>
+                            <a href=# class="btn btn-outline-danger">Подробнее</a>
+                        </div>
+                    </div>
+            </div>
+            {% empty %}
+        {% endfor %}
+    </div>
+{% if is_paginated %}
+        {% include "partial/pagination.html" %}
+    {% endif %}
+</div>
+{% endblock %}
