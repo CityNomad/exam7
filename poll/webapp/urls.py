@@ -1,17 +1,17 @@
 from django.urls import path
-from webapp.views import IndexView, PollView, CreatePoll, UpdatePoll, DeletePoll, CreateChoice, UpdateChoice
+from webapp.views import IndexView, PollView, CreatePoll, UpdatePoll, DeletePoll, CreateChoice, UpdateChoice, DeleteChoice
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path('', IndexView.as_view(), name="index"),
-    # path('projects/', RedirectView.as_view(pattern_name="home")),
+    path('polls/', RedirectView.as_view(pattern_name="index")),
     path('polls/add/', CreatePoll.as_view(), name="create_poll"),
     path('poll/<int:pk>/', PollView.as_view(), name="poll_view"),
     path('polls/<int:pk>/update/', UpdatePoll.as_view(), name='update_poll'),
     path('polls/<int:pk>/delete/', DeletePoll.as_view(), name='delete_poll'),
     path('polls/<int:pk>/choice/add/', CreateChoice.as_view(), name="create_choice"),
     path('choice/<int:pk>/update/', UpdateChoice.as_view(), name="update_choice"),
-    # path('task/<int:pk>/', TaskView.as_view(), name="task_view"),
-    # path('task/<int:pk>/delete/', DeleteTask.as_view(), name="delete_task"),
+    path('choice/<int:pk>/delete/', DeleteChoice.as_view(), name="delete_choice"),
 
 
 

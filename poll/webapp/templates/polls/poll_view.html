@@ -32,7 +32,7 @@
                             <h5>Ответ № {{ choice.id }}</h5>
                             <p>{{ choice.text }}</p>
                                 <div class="btn-group" role="group">
-{#                                    <a href="{% url "delete_choice" choice.pk %}"><i class="bi bi-trash"></i></a>#}
+                                    <a href="{% url "delete_choice" choice.pk %}"><i class="bi bi-trash"></i></a>
                                     <a href="{% url "update_choice" choice.pk %}"><i class="bi bi-pencil"></i></a>
 
                                 </div>
