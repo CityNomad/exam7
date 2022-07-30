@@ -17,6 +17,7 @@
                         <div class="card-body">
                             <h4 class="card-title mt-2">{{ poll.question }}</h4>
                             <a href='{% url 'poll_view' poll.pk %}' class="btn btn-outline-danger">Подробнее</a>
+                            <a href='{% url 'create_answer' poll.pk %}' class="btn btn-outline-danger">Пройти опрос</a>
                         </div>
                     </div>
             </div>
