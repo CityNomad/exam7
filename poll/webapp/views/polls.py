@@ -32,3 +32,9 @@ class CreatePoll(CreateView):
         poll.save()
         form.save_m2m()
         return redirect("poll_view", pk=poll.pk)
+
+class UpdatePoll(UpdateView):
+    model = Poll
+    template_name = 'polls/update_poll.html'
+    form_class = PollForm
+    context_object_name = 'poll'

@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 # Create your models here.
 
 class Poll(models.Model):
@@ -8,6 +8,9 @@ class Poll(models.Model):
 
     def __str__(self):
         return f"{self.id}.{self.question}: {self.created_at}"
+
+    def get_absolute_url(self):
+        return reverse("poll_view", kwargs={"pk": self.pk})
 
     class Meta:
         db_table = "polls"
