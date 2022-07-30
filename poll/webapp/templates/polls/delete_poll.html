@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <form action="" method="post">
+        {% csrf_token %}
+            <h2 class="mb-4">Вы уверены что хотите удалить опрос {{ poll.question }}?</h2>
+            <div class="btn-group">
+                <button type="submit" class="btn btn btn-outline-danger">Да</button>
+                <a href="{% url "poll_view" poll.pk %}" class="btn btn-outline-danger">Нет</a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

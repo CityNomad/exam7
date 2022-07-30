@@ -3,13 +3,10 @@
 {% block title %}Подробнее{% endblock %}
 {% block nav_add %}
     <li class="nav-item">
-        <a class="nav-link" href="{% url 'create_poll' %}">Создать опрос</a>
-    </li>
-    <li class="nav-item">
         <a class="nav-link" href="{% url 'update_poll' poll.pk %}">Изменить опрос</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href=#>Удалить опрос</a>
+        <a class="nav-link" href="{% url 'delete_poll' poll.pk %}">Удалить опрос</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href=#>Добавить ответ</a>

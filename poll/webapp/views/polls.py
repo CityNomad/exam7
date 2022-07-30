@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, FormView, ListView, DetailView, CreateView, DeleteView, UpdateView
 from webapp.models import Poll
 from webapp.forms import SearchForm, PollForm, ChoiceForm
+from django.urls import reverse_lazy
 # Create your views here.
 
 class IndexView(ListView):
@@ -38,3 +39,9 @@ class UpdatePoll(UpdateView):
     template_name = 'polls/update_poll.html'
     form_class = PollForm
     context_object_name = 'poll'
+
+class DeletePoll(DeleteView):
+    model = Poll
+    context_object_name = 'poll'
+    template_name = 'polls/delete_poll.html'
+    success_url = reverse_lazy('index')
